@@ -35,7 +35,7 @@ RegLenType star(const RegLenType& t) {
 }
 
 std::string solve(const std::string& regularExpression, int k, int l) {
-    if(k==0) return "ERROR";
+    if (k == 0) return "ERROR";
     std::vector<RegLenType> stack;
     for (char c : regularExpression) {
         if (c == '1') stack.push_back({{0, 0}});

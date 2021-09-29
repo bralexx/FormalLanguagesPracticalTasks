@@ -2,8 +2,9 @@
 #include "solve.h"
 
 int main() {
-    std::string s1 = "ab+c.aba.*.bac.+.+*";
-    std::string s2 = "acb..bab.c.*.ab.ba.+.+*a.";
-    std::cout << solve("aaaaa....*",3,0);
+    std::string s;
+    int k, l;
+    std::cin >> s >> k >> l;
+    std::cout << solve(s, k, l);
     return 0;
 }
