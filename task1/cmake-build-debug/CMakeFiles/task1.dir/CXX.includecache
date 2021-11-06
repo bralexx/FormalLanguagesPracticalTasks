@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/GitHub/FormalLanguagesPracticalTasks/task1/main.cpp
+iostream
+-
+solve.h
+D:/GitHub/FormalLanguagesPracticalTasks/task1/solve.h
+
+D:/GitHub/FormalLanguagesPracticalTasks/task1/solve.h
+vector
+-
+set
+-
+string
+-
+
