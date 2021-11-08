@@ -3,4 +3,4 @@ project(earleyAlgo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(earleyAlgo main.cpp)
+add_executable(earleyAlgo main.cpp Grammar.cpp Grammar.h)
