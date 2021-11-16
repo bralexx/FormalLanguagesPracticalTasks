@@ -23,7 +23,7 @@ Grammar::Grammar(const std::vector<char>& notTerms, const std::vector<char>& ter
     }
 }
 
-bool Grammar::euler(const std::string& w) {
+bool Grammar::earley(const std::string& w) {
     DList = std::vector<D>(w.size() + 1);
     DList[0].notTermAfterDot.insert({{0, 0}, 0, 0});
     for (int j = 0; j < DList.size(); ++j) {

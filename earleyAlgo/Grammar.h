@@ -49,7 +49,7 @@ public:
     Grammar(const std::vector<char>& notTerms, const std::vector<char>& terms,
             const std::vector<std::pair<char, std::string>>& rules);
 
-    bool euler(const std::string&);
+    bool earley(const std::string& w);
 };
 
 

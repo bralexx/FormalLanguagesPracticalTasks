@@ -17,6 +17,6 @@ int main() {
 
     std::string w;
     std::cin >> w;
-    std::cout << (g.euler(w) ? "true" : "false") << std::endl;
+    std::cout << (g.earley(w) ? "true" : "false") << std::endl;
     return 0;
 }
