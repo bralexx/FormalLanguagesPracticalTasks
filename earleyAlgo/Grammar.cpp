@@ -63,11 +63,12 @@ void Grammar::addToD(int j, Grammar::Situation st) {
 
 void Grammar::complete(int j, const std::string& w) {
     for (auto st1:DList[j].nothingAfterDot)
-        for (auto st2:DList[st1.i].notTermAfterDot) {
-            Situation st = st2;
-            ++st.dotPos;
-            addToD(j, st);
-        }
+        for (auto st2:DList[st1.i].notTermAfterDot)
+            if(rules[st2.rule.first][st2.rule.second].right[st2.dotPos] == st1.rule.first) {
+                Situation st = st2;
+                ++st.dotPos;
+                addToD(j, st);
+            }
 }
 
 void Grammar::predict(int j, const std::string& w) {
@@ -81,5 +82,8 @@ void Grammar::predict(int j, const std::string& w) {
 }
 
 bool Grammar::Situation::operator<(const Grammar::Situation& t2) const {
-    return rule < t2.rule;
+    if(rule != t2.rule)
+        return rule < t2.rule;
+    if(i != t2.i) return i < t2.i;
+    return dotPos < t2.dotPos;
 }
